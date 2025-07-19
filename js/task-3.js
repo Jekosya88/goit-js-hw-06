@@ -7,17 +7,17 @@ class StringBuilder {
         return this.#value;
     }
     padEnd(str) {
-        this.#value.push(str);
+        this.#value = this.#value + str;
     }
     padStart(str) {
-        this.#value.push(str);
+        this.#value = this.#value + str;
     }
     padBoth(str) {
-        this.#value.push(str);
+        this.#value = this.#value + str;
     }
 } 
 const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
+console.log(builder.getValue()); // "."s
 builder.padStart("^");
 console.log(builder.getValue()); // "^."
 builder.padEnd("^");
